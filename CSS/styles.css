@@ -23,7 +23,7 @@ body {
 header{
     background-color: white;
     box-shadow: 2px 10px rgba(0,0,0,0.05);
-    position: static;
+    position: sticky;
     top: 0;
     Z-index: 100;
     display: flex;
@@ -38,3 +38,47 @@ header div a {
     font-weight: bold;
     color: var(--violet-foncé);
 } 
+ul Li {
+    list-style:none;
+    margin-left: 15px;
+    
+}
+ul {
+    display: flex;
+}
+ul li a {
+    text-decoration:none;
+    color: var(--gris-fonce);
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 10px 0;
+}
+
+ul li a:hover {
+    color: var(--violet-doux);
+}
+
+ul li a::after {
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--violet-doux);
+    transition: width 0.3s ease;
+
+}
+ul li a:hover::after {
+    width: 100%;
+}
+
+a.active {
+    color: var(--violet-doux);
+    
+
+}
+a.active::after {
+    width: 100%;
+}
